@@ -15,5 +15,9 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "@stripe/stripe-js": "^5.5.0",
+    "react-router-dom": "^7.1.3"
   }
 }
