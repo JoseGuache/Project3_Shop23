@@ -1,7 +1,7 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #ff7d1a;
+  --secondary: #ffffff;
+  --tertiary: #000000;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -80,7 +80,7 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--secondary);
 }
 
 header a {
@@ -197,10 +197,16 @@ input:focus {
 .card {
   width: 25%;
   text-align: center;
+  border-radius: 4px;
 }
 
 .error-text {
   color: var(--error);
+}
+
+.main{
+  background-color: var(--primary)!important;
+  border: 1px solid var(--primary)!important;
 }
 
 @media screen and (max-width: 768px) {

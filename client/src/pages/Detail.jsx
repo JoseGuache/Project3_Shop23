@@ -95,27 +95,45 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
 
-          <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
-
-          <img
+          <Link to="/">
+          <h4>← Back to Products</h4>
+          </Link>
+          <div className='flex-row space-between'>
+            <div>
+            <img className='mt-2'
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
+            </div>
+            <div>
+            <h2>{currentProduct.name}</h2>
+
+<p>{currentProduct.description}</p>
+
+<p>
+  <strong>Price:</strong>${currentProduct.price}{' '}
+  
+</p>
+<p>
+  <h3>Sizes</h3>
+<button className=''>9</button>
+  <button>10</button>
+  <button>11</button>
+  <button>12</button>
+</p>
+<button onClick={addToCart}>Add to Cart</button>
+  <button
+    disabled={!cart.find((p) => p._id === currentProduct._id)}
+    onClick={removeFromCart}
+  >Remove from Cart</button>
+            </div>
+            
+          </div>
+
+          
+
+          
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
