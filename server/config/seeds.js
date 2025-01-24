@@ -19,110 +19,110 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Jordan 1 Retro High OG "Chicago Lost and Found"',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        'Undoubtedly the most popular and best Jordans of all time, the Air Jordan 1 Retro Chicago are a collector’s dream. Last released in 2015, but don’t expect it to be easy to come by because this iconic silhouette has become a staple for street ballers and basketball fans. Since premiering on The Last Dance, the Chicago colourway has skyrocketed in popularity, but you can still get your hands on a pair if you have cash to the tune of $4000 AUD.',
+      image: 'Jordan-1-Retro-High-OG.jpg',
       category: categories[0]._id,
-      price: 2.99,
+      price: 299.99,
       quantity: 500
     },
     {
-      name: 'Canned Coffee',
+      name: 'Jordan 3 Retro "Black Cement"',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        'Back in 2018, the infamous Jordan 3 Retro OG ushered in a new era for the brand. It was the first time the original ‘Nike Air” branding was featured on the Black Cement since its 2001 incarnation. These iconic, elephant-print emblazoned sneakers were released on His Airness’ 55th birthday, so there’s a little celebration with every pair. Without a doubt, one of the best-looking Jordans money can buy.',
+      image: 'Jordan-3-Black-Cement.jpg',
       category: categories[0]._id,
-      price: 1.99,
+      price: 339.99,
       quantity: 500
     },
     {
-      name: 'Toilet Paper',
+      name: 'Jordan 5 "Fire Red"',
       category: categories[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
+        'It might not look like it, but the 5 Fire Red Retro OG is one of the newest pieces in the Air Jordan portfolio. The retro design was released in early 2020 as part of the silhouette’s 30th anniversary. This variation is essentially identical to the OG pair from 1990, featuring smooth white leather construction on the upper and a fierce black midsole with Fire Red shark teeth to make it one of the most popular Jordans of all time.',
+      image: 'Air-Jordan-5-Fire-Red.jpg',
+      price: 249.99,
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
+      name: 'Jordan 4 "Bred"',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
+        'They say a classic never dies, and the Air Jordan 4 is one example of true longevity. The ‘Black Cement or Bred 4, comes with a red sole, black upper plus grey accents, white midsole plus black, with white and grey accents. While chunky compared to more modern designs, you can’t deny this is one of the best-looking Jordans ever created.',
+      image: 'Air-Jordan-4-Bred.jpg',
+      price: 449.99,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Jordan 11 Retro "Concord"',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
+        'Way back in 1995, Michael Jordan stepped onto the court and into sneaker history with this now iconic pair of Air Jordan XIs. At the time, the never-before-seen silhouette was groundbreaking, with its patent leather upper and translucent sole. More than 30 years on, the Concord XI is still referred to as one of the best Air Jordan shoes ever and thanks to the number 45 at the heel, also one of the biggest collector items.',
+      image: 'Jordan-11-Retro-Concord.jpg',
+      price: 499.99,
       quantity: 100
     },
     {
-      name: 'Camera',
+      name: 'Jordan 6 "Black Infrared"',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
+        'INFRARED is pretty much the ultimate Air Jordan sneaker colour, and the Jordan 6 INFRARED pair features a black upper, black midsole plus red accents, and a translucent sole. Not only is this one of the most popular Jordans it’s also the shoe MJ wore when he won his first championship in 1991, averaging 31.2 points, 11.4 assists, and 6.6 rebounds per game in the finals. GOAT status.',
+      image: 'Air-Jordan-6-Black-Infrared.jpg',
       price: 399.99,
       quantity: 30
     },
     {
-      name: 'Tablet',
+      name: 'Jordan 1 Retro High "Pine Green"',
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
+        'Expanding the “Black Toe” lineup, these Pine Green Retro high tops aren’t just one of the best Air Jordan sneakers ever made, they’re probably the only ones that Celtics fans can embrace. The upper of this Jordan 1 Retro High is constructed from white tumbled leather. A black leather Swoosh, sail midsole, and pine green outsole complete this design.',
+      image: 'Air-Jordan-Retro-1-Pine-Green.jpg',
+      price: 324.99,
       quantity: 30
     },
     {
-      name: 'Tales at Bedtime',
+      name: 'Air Jordan 3 Retro "UNC"',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
+        'The 2020 edition of these classic J’s features a white tumbled leather upper with grey elephant print mudguards and valor blue detailing. These once-rare Air Jordans sport a former Player-Exclusive colourway for students at the University of North Carolina, however, in recent years the colourway has been opened to the public so expect to pay around $600 AUD.',
+      image: 'Jordan3-UNC.jpg',
+      price: 429.99,
       quantity: 100
     },
     {
-      name: 'Spinning Top',
+      name: 'Jordan 11 "Bred"',
       category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
+      description: 'First worn on NBA courts back in April 1996, the AJ11 Bred is playoff-ready and one of the most popular Jordans money can buy. This variation is the 2019 edition, which marked the first release for the style in seven years. The footwear ranks high on MJ’s grail and is undoubtedly one of the best Air Jordan shoes of all time.',
+      image: 'Jordan11-Bred.jpg',
+      price: 299.99,
       quantity: 1000
     },
     {
-      name: 'Set of Plastic Horses',
+      name: 'Air Jordan 4 Retro "What The"',
       category: categories[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
+        'Released for His Airness’s 30th anniversary, the special-edition “What The” colourway is one of the best looking Jordans of all time. This blue AJ4 features colour blocking in a mix of White/Cement, Military Blue, Fire Red, and Black/Cement. All topped off with ‘Nike Air’ branding on the heel tabs.',
+      image: 'Jordan4-WhatThe.jpg',
+      price: 399.99,
       quantity: 1000
     },
     {
-      name: 'Teddy Bear',
+      name: 'Jordan 1 Retro High "Shadow',
       category: categories[4]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
+        'Having only hit shelves three times in the brand’s 30-year history, the OG Shadow is a must-have for collectors and one of the best Air Jordans of all time. The footwear features a black and grey leather upper with original “Nike Air” branding on the tongue tag and insoles.',
+      image: 'Jordan1-Shadow.jpg',
+      price: 294.99,
       quantity: 100
     },
     {
-      name: 'Alphabet Blocks',
+      name: 'Air Jordan 1 Retro "Shattered Backboard',
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
+        'Inspired by the orange and black jersey that Michael Jordan wore when he shattered a backboard in an Italian exhibition game in 1986, this Air Jordan 1 shattered backboard is one of the rarest Air Jordan 1 model money can buy. A deadstock pair will set you back more than $2000 AUD.',
+      image: 'AirJordan1-SG.jpg',
+      price: 699.99,
       quantity: 600
     }
   ]);
