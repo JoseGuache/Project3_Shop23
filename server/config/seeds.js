@@ -22,7 +22,7 @@ db.once('open', async () => {
       name: 'Tin of Cookies',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      image: 'dune.jpg',
       category: categories[0]._id,
       price: 2.99,
       quantity: 500
