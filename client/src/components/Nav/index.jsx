@@ -1,5 +1,117 @@
 
 
+import React, { useState } from "react";
+import Auth from "../../utils/auth";
+import { Link } from "react-router-dom";
+
+function Nav() {
+
+  function showNavigation() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
+    if (Auth.loggedIn()) {
+      return (
+        <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/orderHistory">
+              Order History
+            </Link>
+          </li>
+          <li className="mx-1">
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </li>
+        </ul>
+      );
+    } else {
+      
+      return (
+        <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/signup">
+              Signup
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/login">
+              Login
+            </Link>
+          </li>
+        </ul>
+      );
+    }
+  }
+
+  return (
+    <header className="flex-row px-1">
+      <h1>
+        <Link to="/">
+          <span role="img" aria-label="shopping bag">🛍️</span>
+          -Shop-Shop
+        </Link>
+      </h1>
+
+      <nav>
+        {showNavigation()}
+      </nav>
+    </header>
+  );
+}
+
+export default Nav;
+
+
+
+
+
+
+
+
+// import React, { useState } from "react";
+
+// function Nav() {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+//   const toggleMenu = () => {
+//     setIsMenuOpen(!isMenuOpen);
+//   };
+
+//   return (
+//     <header className="flex flex-col md:flex-row px-1">
+//       <div className="flex justify-between items-center w-full md:w-auto">
+//         <h1>
+//           <Link to="/">
+//             <span role="img" aria-label="shopping bag">🛍️</span>
+//             -Shop-Shop
+//           </Link>
+//         </h1>
+
+//         <button 
+//           className="md:hidden text-xl px-3 py-2" 
+//           onClick={toggleMenu} 
+//           aria-label="Toggle menu"
+//         >
+//           ☰
+//         </button>
+//       </div>
+
+//       <nav className={`mt-4 md:mt-0 ${isMenuOpen ? "block" : "hidden"} md:flex`}>
+//         {showNavigation()}
+//       </nav>
+//     </header>
+//   );
+// }
+
+
+
+
+
+
 // import Auth from "../../utils/auth";
 // import { Link } from "react-router-dom";
 
@@ -299,60 +411,4 @@
 // export default Nav;
 
 
-import Auth from "../../utils/auth";
-import { Link } from "react-router-dom";
 
-function Nav() {
-
-  function showNavigation() {
-    if (Auth.loggedIn()) {
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
-            </Link>
-          </li>
-          <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-          </li>
-        </ul>
-      );
-    } else {
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-        </ul>
-      );
-    }
-  }
-
-  return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
-        </Link>
-      </h1>
-
-      <nav>
-        {showNavigation()}
-      </nav>
-    </header>
-  );
-}
-
-export default Nav;
