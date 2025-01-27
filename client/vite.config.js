@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path, { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,11 +13,13 @@ export default defineConfig({
         target: 'http://localhost:3001',
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
       },
       '/graphql': {
         target: 'http://localhost:3001',
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/graphql/, '')
       }
     }
   },
@@ -29,11 +31,5 @@ export default defineConfig({
         'src-sw': resolve(__dirname, 'src/src-sw.js')
       }
     }
-  },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
   }
-})
-
+});

@@ -66,3 +66,37 @@ function CategoryMenu() {
 }
 
 export default CategoryMenu;
+
+
+// import React from "react";
+// import { useStoreContext } from "../../utils/GlobalState";
+// import { UPDATE_CURRENT_CATEGORY } from "../../utils/actions";
+
+// function CategoryMenu({ closeMenu }) {
+//   const [state, dispatch] = useStoreContext();
+//   const { categories } = state;
+
+//   const handleClick = (id) => {
+//     dispatch({
+//       type: UPDATE_CURRENT_CATEGORY,
+//       currentCategory: id,
+//     });
+//     if (closeMenu) closeMenu(); // Optional closing callback
+//   };
+
+//   return (
+//     <>
+//       {categories.map((category) => (
+//         <button
+//           key={category._id}
+//           onClick={() => handleClick(category._id)}
+//         >
+//           {category.name}
+//         </button>
+//       ))}
+//       <button onClick={() => handleClick("")}>All</button>
+//     </>
+//   );
+// }
+
+// export default CategoryMenu;

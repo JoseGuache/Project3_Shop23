@@ -8,9 +8,9 @@ db.once('open', async () => {
   await cleanDB('User', 'users');
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
+    { name: 'Mens' },
+    { name: 'Woman' },
+    { name: 'Kids' },
     { name: 'Books' },
     { name: 'Toys' }
   ]);
@@ -22,7 +22,7 @@ db.once('open', async () => {
       name: 'Tin of Cookies',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'dune.jpg',
+      image: 'cookie-tin.jpg',
       category: categories[0]._id,
       price: 2.99,
       quantity: 500
