@@ -1,63 +1,77 @@
-
-
 import React, { useState } from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import CategoryMenu from "../CategoryMenu";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
+function DropdownItemTagsExample({ isLoggedIn, toggleMenu }) {
+  return (
+    <DropdownButton id="dropdown-item-button" title="Menu">
+      <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/" onClick={toggleMenu}>
+        Home
+      </Dropdown.Item>
+      <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/category/men" onClick={toggleMenu}>
+        Men
+      </Dropdown.Item>
+      <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/category/women" onClick={toggleMenu}>
+        Women
+      </Dropdown.Item>
+      <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/category/kids" onClick={toggleMenu}>
+        Kids
+      </Dropdown.Item>
+      {isLoggedIn ? (
+        <>
+          <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/orderHistory" onClick={toggleMenu}>
+            Order History
+          </Dropdown.Item>
+          <Dropdown.Item className="dropdown-item-spacing" as="button" onClick={() => { Auth.logout(); toggleMenu(); }}>
+            Logout
+          </Dropdown.Item>
+        </>
+      ) : (
+        <>
+          <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/signup" onClick={toggleMenu}>
+            Signup
+          </Dropdown.Item>
+          <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/login" onClick={toggleMenu}>
+            Login
+          </Dropdown.Item>
+        </>
+      )}
+    </DropdownButton>
+  );
+}
 
 function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function showNavigation() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
-    if (Auth.loggedIn()) {
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
-            </Link>
-          </li>
-          <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-          </li>
-        </ul>
-      );
-    } else {
-      
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-        </ul>
-      );
-    }
-  }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
-        </Link>
-      </h1>
+    <header className="flex flex-col md:flex-row px-1">
+      <div className="flex justify-between items-center w-full md:w-auto">
+        <h1>
+          <Link to="/">
+            <span role="img" aria-label="shopping bag">🛍️</span>
+            -Shop-Shop
+          </Link>
+        </h1>
 
-      <nav>
-        {showNavigation()}
+        {/* Hamburger menu button */}
+        <button 
+          className="md:hidden text-xl px-3 py-2" 
+          onClick={toggleMenu} 
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      <nav className={`mt-4 md:mt-0 ${isMenuOpen ? "block" : "hidden"} md:flex`}>
+        <DropdownItemTagsExample isLoggedIn={Auth.loggedIn()} toggleMenu={toggleMenu} />
       </nav>
     </header>
   );
@@ -106,6 +120,7 @@ export default Nav;
 //     </header>
 //   );
 // }
+
 
 
 

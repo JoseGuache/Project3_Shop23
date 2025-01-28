@@ -836,4 +836,8 @@ header {
     margin-top: 113px;
   }
 }
+
+.dropdown-item-spacing {
+  margin-bottom: 10px; /* Adjust the value as needed for desired spacing */
+}
 /*# sourceMappingURL=style.css.map */
