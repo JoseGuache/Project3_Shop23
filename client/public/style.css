@@ -838,6 +838,22 @@ header {
 }
 
 .dropdown-item-spacing {
-  margin-bottom: 10px; /* Adjust the value as needed for desired spacing */
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+/* Ensure the nav bar uses flexbox for centering */
+nav {
+  display: flex;
+  justify-content: center; /* Center the dropdown */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Ensure nav takes full width */
+  padding: 20px 0; /* Add vertical padding for more height */
+}
+
+/* Existing styles for dropdown items */
+.dropdown-item-spacing {
+  margin-bottom: 20px;
+  padding: 10px 20px;
 }
 /*# sourceMappingURL=style.css.map */
