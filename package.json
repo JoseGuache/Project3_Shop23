@@ -15,9 +15,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "sass": "^1.83.4"
   },
   "dependencies": {
-    "vue": "^3.5.13"
+    "bootstrap": "^5.3.3"
   }
 }
