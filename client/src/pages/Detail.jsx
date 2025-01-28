@@ -113,7 +113,7 @@ function Detail() {
             <h4 className="text-secondary mt-4">← Back to Products</h4>
           </Link>
 
-          <Row className='mt-4'>
+          <Row className='mt-4 d-flex flex-column flex-lg-row'>
             <Col>
               <img
                 src={`/images/${currentProduct.image}`}
