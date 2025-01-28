@@ -10,9 +10,7 @@ db.once('open', async () => {
   const categories = await Category.insertMany([
     { name: 'Mens' },
     { name: 'Woman' },
-    { name: 'Kids' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Kids' }
   ]);
 
   console.log('categories seeded');
@@ -74,7 +72,7 @@ db.once('open', async () => {
     },
     {
       name: 'Jordan 1 Retro High "Pine Green"',
-      category: categories[2]._id,
+      category: categories[1]._id,
       description:
         'Expanding the “Black Toe” lineup, these Pine Green Retro high tops aren’t just one of the best Air Jordan sneakers ever made, they’re probably the only ones that Celtics fans can embrace. The upper of this Jordan 1 Retro High is constructed from white tumbled leather. A black leather Swoosh, sail midsole, and pine green outsole complete this design.',
       image: 'Air-Jordan-Retro-1-Pine-Green.jpg',
@@ -83,7 +81,7 @@ db.once('open', async () => {
     },
     {
       name: 'Air Jordan 3 Retro "UNC"',
-      category: categories[3]._id,
+      category: categories[1]._id,
       description:
         'The 2020 edition of these classic J’s features a white tumbled leather upper with grey elephant print mudguards and valor blue detailing. These once-rare Air Jordans sport a former Player-Exclusive colourway for students at the University of North Carolina, however, in recent years the colourway has been opened to the public so expect to pay around $600 AUD.',
       image: 'Jordan3-UNC.jpg',
@@ -92,7 +90,7 @@ db.once('open', async () => {
     },
     {
       name: 'Jordan 11 "Bred"',
-      category: categories[4]._id,
+      category: categories[2]._id,
       description: 'First worn on NBA courts back in April 1996, the AJ11 Bred is playoff-ready and one of the most popular Jordans money can buy. This variation is the 2019 edition, which marked the first release for the style in seven years. The footwear ranks high on MJ’s grail and is undoubtedly one of the best Air Jordan shoes of all time.',
       image: 'Jordan11-Bred.jpg',
       price: 299.99,
@@ -100,7 +98,7 @@ db.once('open', async () => {
     },
     {
       name: 'Air Jordan 4 Retro "What The"',
-      category: categories[4]._id,
+      category: categories[2]._id,
       description:
         'Released for His Airness’s 30th anniversary, the special-edition “What The” colourway is one of the best looking Jordans of all time. This blue AJ4 features colour blocking in a mix of White/Cement, Military Blue, Fire Red, and Black/Cement. All topped off with ‘Nike Air’ branding on the heel tabs.',
       image: 'Jordan4-WhatThe.jpg',
@@ -109,7 +107,7 @@ db.once('open', async () => {
     },
     {
       name: 'Jordan 1 Retro High "Shadow',
-      category: categories[4]._id,
+      category: categories[1]._id,
       description:
         'Having only hit shelves three times in the brand’s 30-year history, the OG Shadow is a must-have for collectors and one of the best Air Jordans of all time. The footwear features a black and grey leather upper with original “Nike Air” branding on the tongue tag and insoles.',
       image: 'Jordan1-Shadow.jpg',
@@ -118,7 +116,7 @@ db.once('open', async () => {
     },
     {
       name: 'Air Jordan 1 Retro "Shattered Backboard',
-      category: categories[4]._id,
+      category: categories[1]._id,
       description:
         'Inspired by the orange and black jersey that Michael Jordan wore when he shattered a backboard in an Italian exhibition game in 1986, this Air Jordan 1 shattered backboard is one of the rarest Air Jordan 1 model money can buy. A deadstock pair will set you back more than $2000 AUD.',
       image: 'AirJordan1-SG.jpg',

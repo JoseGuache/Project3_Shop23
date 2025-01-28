@@ -26,7 +26,7 @@ function DropdownItemTagsExample({ isLoggedIn }) {
       <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/" onClick={handleItemClick}>
         Home
       </Dropdown.Item>
-      <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/category/men" onClick={handleItemClick}>
+      <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/category" onClick={handleItemClick}>
         Men
       </Dropdown.Item>
       <Dropdown.Item className="dropdown-item-spacing" as={Link} to="/category/women" onClick={handleItemClick}>
