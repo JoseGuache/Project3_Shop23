@@ -230,6 +230,15 @@ input:focus {
   color: #f8a667!important;
 }
 
+.fixed-img {
+  height: 250px!important;
+  object-fit: contain;
+}
+
+.fixed-height {
+  height: 50px!important;
+}
+
 .line{
   border-bottom: 3px solid var(--primary); 
   width: auto;

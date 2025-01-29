@@ -2,7 +2,7 @@
 
 ## Description
 
-For this project our team decided to create an ecommerce application that sells Jordans. 
+For this project, our team developed a fully functional e-commerce web application specializing in the sale of Jordan-brand sneakers for men, women, and children. The application provides a seamless shopping experience, allowing users to browse a curated selection of shoes, add items to their cart, adjust quantities, remove products, and proceed to checkout. To complete a purchase, users must have an account and be signed in, ensuring a secure transaction process. This project showcases our ability to design and implement a user-friendly and efficient online shopping platform.
 
 ## Table of Contents
 
@@ -19,15 +19,25 @@ Use "npm i" to download the Mongoose, Express, React, Jwt-decode, GraphQL, Strip
 
 <a href="">Deployed Link</a> 
 
-![Photo of application usage](.)
+![Photo of Login Page](.)
 
-![Photo of application usage](.)
+First login with your email and password or create an account by signing up.
 
-![Photo of application usage](.)
+![Photo of Home Page](.)
 
-![Photo of application usage](.)
+On the homepage, you can explore a variety of shoe selections and either add your preferred pair to the cart or click on a product to view its detailed information.
 
-![Photo of application usage](.)
+![Photo of Product Detail Page](.)
+
+On the details page, you can view the shoe's description and choose your desired size.
+
+![Photo of Cart](.)
+
+In the cart, you can adjust the quantity of the shoes you wish to purchase or remove them entirely.
+
+![Photo of Order History](.)
+
+The Order History page displays a record of all the shoes you have previously purchased.
 
 ## Credits
 
