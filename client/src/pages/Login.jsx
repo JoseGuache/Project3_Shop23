@@ -30,40 +30,41 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+    <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }} className="bg-body-tertiary">
+      <video
+        src="/images/Login-Video-Final.mp4" // Updated to local video file
+        autoPlay
+        loop
+        muted
+        onError={(e) => {
+          console.error("Video failed to load:", e);
+          alert("Video could not be loaded.");
+        }}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }}
+      />
+      <main className="form-signin w-100 m-auto">
+        <form onSubmit={handleFormSubmit}>
+          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+          <div className="form-floating">
+            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label htmlFor="floatingInput">Email address</label>
           </div>
-        ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+          <div className="form-floating">
+            <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
+            <label htmlFor="floatingPassword">Password</label>
+          </div>
+
+          <div className="form-check text-start my-3">
+            <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              Remember me
+            </label>
+          </div>
+          <button className="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+          <p className="mt-5 mb-3 text-body-secondary">© 6Foot & ↑ </p>
+        </form>
+      </main>
     </div>
   );
 }
