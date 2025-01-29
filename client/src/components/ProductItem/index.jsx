@@ -42,31 +42,22 @@ function ProductItem(item) {
   }
 
   return (
-
     <>
-
-
       <Card style={{ width: '18rem' }} className="m-1">
         <Link to={`/products/${_id}`} className='text-decoration-none'>
           <Card.Img className="img-fluid" variant="top" src={`/images/${image}`} />
-          <Card.Title className="text-main mt-4 ">{name}</Card.Title>
+          <Card.Title className="text-main ">{name}</Card.Title>
         </Link>
         <Card.Body>
 
           <Card.Text>
-            {/* <div>{quantity} {pluralize("item", quantity)} in stock</div> */}
             <span>${price}</span>
           </Card.Text>
           <Button variant="primary" className="mainBtn" onClick={addToCart}>Add to cart</Button>
 
         </Card.Body>
       </Card>
-
-
     </>
-
-
-
   );
 }
 

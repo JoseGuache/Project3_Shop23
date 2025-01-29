@@ -109,7 +109,7 @@ function Login(props) {
           Remember me
         </label>
       </div>
-      <button className="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+      <button className="btn btn-primary w-100 py-2" style={{ backgroundColor: '#ff7d1a', color: 'white' }} type="submit">Sign in</button>
       <p className="mt-5 mb-3 text-body-secondary">© Shop 23 </p>
     </form>
   </main>
