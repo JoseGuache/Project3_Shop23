@@ -1,6 +1,6 @@
 :root {
   --primary: #ff7d1a;
-  --secondary: #816b6b;
+  --secondary: #ffffff;
   --tertiary: #000000;
   --light: #fafafa;
   --dark: #272f32;
@@ -80,7 +80,7 @@ a:hover {
 }
 
 header {
-  background: var(--secondary);
+  background: var(--primary);
 }
 
 header a {
