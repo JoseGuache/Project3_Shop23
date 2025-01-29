@@ -105,6 +105,7 @@ function Nav() {
           <Link to="/" className="text-decoration-none">
             <span role="img" aria-label="shopping bag">👟</span>
             Shop 23
+            <span role="img" aria-label="shopping bag">👟</span>
           </Link>
         </h1>
       </div>
