@@ -29,6 +29,7 @@
 
 .cart .close:hover {
   text-decoration: underline;
+  color: var(--primary);
 }
 
 .cart-closed {
