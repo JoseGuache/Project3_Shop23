@@ -226,6 +226,10 @@ input:focus {
   color: #f8a667!important;
 }
 
+.text-secondary:hover{
+  color: #f8a667!important;
+}
+
 .line{
   background-color: white!important;
   padding: 15px;

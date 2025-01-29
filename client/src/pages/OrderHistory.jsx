@@ -14,22 +14,24 @@ function OrderHistory() {
   return (
     <>
       <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
+      <Link to="/" className='text-decoration-none'>
+            <h4 className="text-secondary mt-4">← Back to Products</h4>
+          </Link>
 
         {user ? (
           <>
-            <h2>
+            <h2 className="mt-4">
               Order History for {user.firstName} {user.lastName}
             </h2>
             {user.orders.map((order) => (
               <div key={order._id} className="my-2">
-                <h3>
+                <h3 className="text-main my-4">
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
                 <div className="flex-row">
                   {order.products.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card px-1 py-1">
-                      <Link to={`/products/${_id}`}>
+                    <div key={index} className="card px-1 py-1 mx-2">
+                      <Link to={`/products/${_id}`} className='text-decoration-none text-secondary'>
                         <img alt={name} src={`/images/${image}`} />
                         <p>{name}</p>
                       </Link>
