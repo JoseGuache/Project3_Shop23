@@ -114,6 +114,7 @@ img {
 
 span[role="img"] {
   cursor: default;
+  /* margin-top: auto; */
 }
 
 form {
@@ -202,6 +203,14 @@ input:focus {
 
 .error-text {
   color: var(--error);
+}
+
+
+
+#dropdown-item-button{
+  background-color: var(--primary)!important;
+  border: 1px solid var(--primary)!important;
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
 
 .mainBtn{
