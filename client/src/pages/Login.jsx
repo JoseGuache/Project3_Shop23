@@ -84,6 +84,9 @@ function Login(props) {
           className="form-control" 
           id="floatingInput" 
           placeholder="name@example.com" 
+          onChange={handleChange}
+          value={formState.email}
+          name='email'
         />
         <label htmlFor="floatingInput">Email address</label>
       </div>
@@ -94,6 +97,9 @@ function Login(props) {
           className="form-control" 
           id="floatingPassword" 
           placeholder="Password" 
+          onChange={handleChange}
+          value={formState.password}
+          name='password'
         />
         <label htmlFor="floatingPassword">Password</label>
       </div>
