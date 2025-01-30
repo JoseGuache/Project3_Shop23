@@ -72,7 +72,7 @@ function Signup(props) {
         style={{
           position: 'relative',  // Keep the form in front of the video
           zIndex: 1, // Ensure the form is in front of the video
-          backgroundColor: '#ff7d1a', // Optional: add background to form for readability
+          backgroundColor: 'rgba(255, 125, 26, 0.7)', // Optional: add background to form for readability
           padding: '2rem',  // Space inside the form
           borderRadius: '20px',  // Optional: rounded corners
           width: '400px',  // Set form width
