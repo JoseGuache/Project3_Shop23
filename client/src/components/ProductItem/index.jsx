@@ -45,8 +45,8 @@ function ProductItem(item) {
     <>
       <Card style={{ width: '18rem' }} className="m-1">
         <Link to={`/products/${_id}`} className='text-decoration-none'>
-          <Card.Img className="img-fluid" variant="top" src={`/images/${image}`} />
-          <Card.Title className="text-main ">{name}</Card.Title>
+          <Card.Img className="img-fluid fixed-img" variant="top" src={`/images/${image}`} />
+          <Card.Title className="text-main mt-4 fixed-height">{name}</Card.Title>
         </Link>
         <Card.Body>
 
