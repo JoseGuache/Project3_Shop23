@@ -19,23 +19,23 @@ Use "npm i" to download the Mongoose, Express, React, Jwt-decode, GraphQL, Strip
 
 <a href="">Deployed Link</a> 
 
-![Photo of Login Page](.)
+![Photo of Login Page](./client/public/images/loginPage.png)
 
 First login with your email and password or create an account by signing up.
 
-![Photo of Home Page](.)
+![Photo of Home Page](./client/public/images/homePage.png)
 
 On the homepage, you can explore a variety of shoe selections and either add your preferred pair to the cart or click on a product to view its detailed information.
 
-![Photo of Product Detail Page](.)
+![Photo of Product Detail Page](./client/public/images/detailsPage.png)
 
 On the details page, you can view the shoe's description and choose your desired size.
 
-![Photo of Cart](.)
+![Photo of Cart](./client/public/images/cart.png)
 
 In the cart, you can adjust the quantity of the shoes you wish to purchase or remove them entirely.
 
-![Photo of Order History](.)
+![Photo of Order History](./client/public/images/orderHistory.png)
 
 The Order History page displays a record of all the shoes you have previously purchased.
 
